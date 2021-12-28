@@ -25,11 +25,12 @@ public class Capitulo {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Capitulo(int numero, String titulo, Libro libro) {
+	public Capitulo(int numero, String titulo, Libro libro, Autor a) {
 		super();
 		this.numero = numero;
 		this.titulo = titulo;
 		this.libro = libro;
+		this.autor = a;
 	}
 
 	public int getId() {

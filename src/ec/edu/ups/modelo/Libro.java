@@ -29,7 +29,7 @@ public class Libro {
 	}
 
 
-	public Libro(String nombre, String isbn, int numPaginas, List<Capitulo> capitulos) {
+	public Libro(String nombre, String isbn, int numPaginas) {
 		super();
 		this.nombre = nombre;
 		this.isbn = isbn;
