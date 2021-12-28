@@ -38,28 +38,24 @@
 	   <h:dataTable value="#{crearLibroControler.libros}" var="l" 
 	   styleClass="tabla" headerClass="cabeceraTabla"
 			rowClasses="filaPar,filaImpar">
-      <h:column>
-         <f:facet name="header">
-            <h:outputText value="Nombre"></h:outputText>
-         </f:facet>
-         <h:outputText value="#{l.nombre}"></h:outputText>
-      </h:column>
-      <h:column>
-         <f:facet name="header">
-            <h:outputText value="ISBN"></h:outputText>
-         </f:facet>
-         <h:outputText value="#{l.isbn}"></h:outputText>
-      </h:column>
-       <h:column>
-         <f:facet name="header">
-            <h:outputText value="Número de páginas"></h:outputText>
-         </f:facet>
-         <h:outputText value="#{l.numPaginas}"></h:outputText>
-      </h:column>
- 	
+
 
    </h:dataTable>
-   <h:button value="Agregar Nuevo Libro" outcome="crearLibros" />
-   
+    <h:form>
+        <h:outputText value="Nombre"></h:outputText>
+		<h:inputText id="nombreLibro" required="true" value="#{crearLibroControler.nombre}">
+		</h:inputText>
+		    <h:outputText value="ISBN"></h:outputText>
+		<h:inputText id="isbnLibro" required="true" value="#{crearLibroControler.isbn}">
+		</h:inputText>
+		    <h:outputText value="Número de Páginas"></h:outputText>
+		<h:inputText id="numPaginasLibro" required="true" value="#{crearLibroControler.numPaginas}">
+		</h:inputText>
+		<h:commandButton value="Enviar" action="#{crearLibroControler.add}"></h:commandButton>
+	</h:form>
+	
+    
+
+	
 </h:body>
 </html>
